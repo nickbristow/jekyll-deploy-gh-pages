@@ -8,8 +8,8 @@ git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" && \
 git add . && \
 echo -n 'Files to Commit:' && ls -l | wc -l && \
 git commit -m'action build' > /dev/null 2>&1 && \
-output=$((git push --force $remote_repo master:$remote_branch) 2>&1) && \
+git push --force $remote_repo master:$remote_branch && \
 echo "$output" && \
 rm -fr .git && \
 cd ../
-echo '👍 GREAT SUCCESS!'
+echo '👍 GREAT SUCCESS BY NICK!'
